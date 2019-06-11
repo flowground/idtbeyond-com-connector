@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "country_code": {
+            "required": true,
+            "type": "string",
+            "default": "BR"
+        },
+        "mobile_number": {
+            "required": true,
+            "type": "string",
+            "default": "5521983115555"
+        },
+        "x_idt_beyond_app_id": {
+            "required": true,
+            "type": "string",
+            "default": "APP_ID"
+        },
+        "x_idt_beyond_app_key": {
+            "required": true,
+            "type": "string",
+            "default": "APP_KEY"
+        }
+    }
+}

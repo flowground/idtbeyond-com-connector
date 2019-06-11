@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "date_from": {
+            "required": true,
+            "type": "string",
+            "default": "2016-01-28"
+        },
+        "date_to": {
+            "required": true,
+            "type": "string",
+            "default": "2016-01-28"
+        },
+        "x_idt_beyond_app_id": {
+            "required": true,
+            "type": "string",
+            "default": "APP_ID"
+        },
+        "x_idt_beyond_app_key": {
+            "required": true,
+            "type": "string",
+            "default": "APP_KEY"
+        }
+    }
+}

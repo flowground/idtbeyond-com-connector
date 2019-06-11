@@ -1,0 +1,60 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "amount": {
+                    "default": 500,
+                    "description": "The amount, in cents, of the product you are purchasing. '500' = $5.00",
+                    "type": "integer"
+                },
+                "carrier_code": {
+                    "default": "Claro",
+                    "description": "Name of the mobile carrier. 'Claro'",
+                    "type": "string"
+                },
+                "client_transaction_id": {
+                    "default": "",
+                    "description": "UNIQUE 15 char ID you use to track topups. 'trans0123456789'",
+                    "type": "string"
+                },
+                "country_code": {
+                    "default": "GT",
+                    "description": "2-digit code of the country in ISO 3166 format. 'GT'",
+                    "type": "string"
+                },
+                "mobile_number": {
+                    "default": "50231234567",
+                    "description": "Mobile number to topup. VALIDATE prior to submission. '50231234567'",
+                    "type": "string"
+                },
+                "plan": {
+                    "default": "Sandbox",
+                    "description": "The Application plan being used. Case-sensitive. 'Sandbox' or 'Production'",
+                    "type": "string"
+                },
+                "product_code": {
+                    "default": "",
+                    "description": "Optional code to distinguish one particular product from another. '76560'",
+                    "type": "string"
+                },
+                "terminal_id": {
+                    "default": "Kiosk 5",
+                    "description": "ID for the Terminal used to perform the topup. 'Kiosk 5'",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "x_idt_beyond_app_id": {
+            "required": true,
+            "type": "string",
+            "default": "APP_ID"
+        },
+        "x_idt_beyond_app_key": {
+            "required": true,
+            "type": "string",
+            "default": "APP_KEY"
+        }
+    }
+}

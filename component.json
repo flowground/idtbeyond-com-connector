@@ -1,0 +1,289 @@
+{
+    "title": "Active Documentation for /v1",
+    "description": "Our active docs provide the ability to test out your account and to see the responses to your queries. The services are RESTful, and are accessed using standard HTTP methods over a secure HTTPS channel. Requests and responses are currently sent in JSON format, and have a base URL of /v1.",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/idtbeyond.com/1.1.7/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.idtbeyond.com/v1",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_iatu_balance": {
+            "main": "./lib/actions/get_iatu_balance.js",
+            "title": "Account balance",
+            "description": "Returns a JSON of the account balance.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_iatu_balance.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_iatu_charges_reports_all": {
+            "main": "./lib/actions/get_iatu_charges_reports_all.js",
+            "title": "List of account charges in JSON",
+            "description": "Returns charges by date range.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_iatu_charges_reports_all.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_iatu_charges_reports_all_csv": {
+            "main": "./lib/actions/get_iatu_charges_reports_all_csv.js",
+            "title": "List of account charges in CSV",
+            "description": "Returns charges by date range in CSV.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_iatu_charges_reports_all_csv.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_iatu_number_validator": {
+            "main": "./lib/actions/get_iatu_number_validator.js",
+            "title": "Mobile number validation",
+            "description": "Checks to verify if the phone number is valid for the country supplied.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_iatu_number_validator.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_iatu_products_promotions": {
+            "main": "./lib/actions/get_iatu_products_promotions.js",
+            "title": "Current promotions",
+            "description": "Returns a JSON of the current promotions.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_iatu_products_promotions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_iatu_products_reports_all": {
+            "main": "./lib/actions/get_iatu_products_reports_all.js",
+            "title": "Get a list of products in JSON format",
+            "description": "Returns a JSON list of products, ranges, and their commissions percentages.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_iatu_products_reports_all.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_iatu_products_reports_all_csv": {
+            "main": "./lib/actions/get_iatu_products_reports_all_csv.js",
+            "title": "Get a list of products in CSV format",
+            "description": "Returns a CSV of products, ranges, and their commissions percentages.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_iatu_products_reports_all_csv.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_iatu_products_reports_local_value": {
+            "main": "./lib/actions/get_iatu_products_reports_local_value.js",
+            "title": "Get the estimated Local Value of a product",
+            "description": "Returns a CSV of products, ranges, and their commissions percentages.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_iatu_products_reports_local_value.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_iatu_topups": {
+            "main": "./lib/actions/post_iatu_topups.js",
+            "title": "Topup a mobile phone",
+            "description": "Submits an IATU transaction request.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_iatu_topups.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_iatu_topups_reports": {
+            "main": "./lib/actions/post_iatu_topups_reports.js",
+            "title": "Search topups transactions",
+            "description": "Search topups transactions, by date, with client_transaction_id or to_service_number. Use 'client_transaction_id' to search by transaction number, or 'to_service_number' to get transaction status.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_iatu_topups_reports.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_iatu_topups_reports_all": {
+            "main": "./lib/actions/get_iatu_topups_reports_all.js",
+            "title": "List of account topups in JSON",
+            "description": "Returns topups by date range.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_iatu_topups_reports_all.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_iatu_topups_reports_all_csv": {
+            "main": "./lib/actions/get_iatu_topups_reports_all_csv.js",
+            "title": "List of account topups in CSV",
+            "description": "Returns topups by date range in CSV.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_iatu_topups_reports_all_csv.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_iatu_topups_reports_totals": {
+            "main": "./lib/actions/get_iatu_topups_reports_totals.js",
+            "title": "Summary of account topups in JSON",
+            "description": "Returns topups totals by date range.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_iatu_topups_reports_totals.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_iatu_topups_reverse": {
+            "main": "./lib/actions/post_iatu_topups_reverse.js",
+            "title": "Reversal of a Topup",
+            "description": "Occasionally, a carrier will not be able to successfully complete a topup request. In this case, we will attempt to automatically reverse the transaction for you, and return the money into your account. In the case when this is not possible, you may need to request a reverse on the transaction that has a status of 'transaction_status' 'notredeemed'.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_iatu_topups_reverse.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_status": {
+            "main": "./lib/actions/get_status.js",
+            "title": "Status check",
+            "description": "Returns a JSON of the API status.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_status.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

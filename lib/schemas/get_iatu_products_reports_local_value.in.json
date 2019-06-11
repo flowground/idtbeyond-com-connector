@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "country_code": {
+            "required": true,
+            "type": "string",
+            "default": "GT"
+        },
+        "carrier_code": {
+            "required": true,
+            "type": "string",
+            "default": "Claro"
+        },
+        "amount": {
+            "required": true,
+            "type": "integer",
+            "default": 500
+        },
+        "currency_code": {
+            "required": true,
+            "type": "string",
+            "default": "USD"
+        },
+        "x_idt_beyond_app_id": {
+            "required": true,
+            "type": "string",
+            "default": "APP_ID"
+        },
+        "x_idt_beyond_app_key": {
+            "required": true,
+            "type": "string",
+            "default": "APP_KEY"
+        }
+    }
+}
